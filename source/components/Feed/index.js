@@ -1,6 +1,6 @@
 // Core 
 import React, { Component } from 'react';
-import {hot} from 'react-hot-loader';
+import { hot } from 'react-hot-loader';
 
 //Components
 import StatusBar from 'components/StatusBar';
@@ -12,20 +12,11 @@ import Styles from './styles.m.css';
 
 export default class Feed extends Component {
     render() {
-
-        const {
-            avatar, 
-            currentUserFirstName
-        } = this.props;
-
         return (
             <section className={Styles.feed}>
-                <StatusBar {...this.props} />
-                <Composer 
-                avatar={avatar}
-                currentUserFirstName={currentUserFirstName}
-                />
-                <Post {...this.props} />
+                <StatusBar />
+                <Composer />
+                <Post />
             </section>
         )
     }
